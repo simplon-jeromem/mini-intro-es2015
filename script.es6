@@ -19,7 +19,7 @@ class Panier {
     }
 
     get totalTTC(){
-        return produits.reduce((total,p ) => total + p.prixTTC )
+        return this.produits.reduce((total,p ) => total + p.prixTTC )
     }
 }
 
@@ -48,9 +48,12 @@ class Produit {
 }
 
 var panier = new Panier();
-var produit = new Produit('pain',0.8);
-console.log('pain ttc', produit.prixTTC);
-panier.ajouteProduit(produit);
+var pain = new Produit('pain',0.8);
+var lait = new Produit('lait',1);
+console.log('pain ttc', pain.prixTTC);
+panier.ajouteProduit(pain);
+panier.ajouteProduit(lait);
+console.log('total panier', panier.totalTTC );
 
 
 /**
@@ -173,7 +176,7 @@ const participant = {
     age: 42,
     ville: 'Lyon'
 };
-console.log(unObject.nom);
+console.log(participant.nom);
 
 /*
 déstructuration
