@@ -1,0 +1,16 @@
+{
+  "name": "introES6",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "watch": "node_modules/.bin/babel script.es6 --watch --out-file script.js",
+    "build": "node_modules/.bin/babel script.es6 --out-file script.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0"
+  }
+}
